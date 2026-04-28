@@ -1,0 +1,11 @@
+# Ignorera miljövariabler och nycklar
+.env
+*.env
+
+# Ignorera Python-cache och virtuella miljöer
+__pycache__/
+venv/
+*.pyc
+
+# Ignorera genererade markdown-rapporter
+firewall_analysis_*.md
