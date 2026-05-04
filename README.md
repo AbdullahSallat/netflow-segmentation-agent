@@ -181,7 +181,7 @@ Rekommenderas att köra minst 48 timmar för en representativ bild av trafiken.
 ### Hämta fler meddelanden
 ```powershell
 python graylog_analyzer.py --hours 48 --max 10000
-python graylog_analyzer.py --hours 168 --max 25000
+python graylog_analyzer.py --hours 168 --max 10000
 ```
 **Vad det gör:** Ökar antalet Netflow-poster som hämtas. Fler meddelanden = mer representativ analys, men tar längre tid. Ni har 6+ miljoner meddelanden per dag, så 10 000-25 000 ger en bra bild.
 
@@ -211,7 +211,7 @@ python graylog_analyzer.py --query "nf_proto_name:TCP AND nf_l4_dst_port:445"
 ### Kombinera flaggor
 ```powershell
 # Hämta 7 dagars data, max 20 000 meddelanden, med AI-analys
-python graylog_analyzer.py --hours 168 --max 20000
+python graylog_analyzer.py --hours 168 --max 10000
 
 # Analysera bara RDP-trafik utan AI
 python graylog_analyzer.py --query "nf_l4_dst_port:3389" --hours 168 --no-ai
